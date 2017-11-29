@@ -1,7 +1,7 @@
 <template>
     <div class="my-app">
         <SideBar />
-        <router-view></router-view>
+        <router-view>123424</router-view>
     </div>
 </template>
 <script>
