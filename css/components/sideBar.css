@@ -1,0 +1,77 @@
+a, p, h1, h2, h3, h4, h5, div, ul, li {
+    color: #fff;
+}
+.menu {
+    width: 210px;
+    height: 100%;
+    background: #293f54;
+}
+.hasChild {
+    display: block;
+}
+.noChild {
+    display: none;
+}
+.title {
+    padding: 10px;
+    font-size: 0;
+}
+.title h3 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 60px;
+}
+.icon-logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: url("../../img/common/logo.png") center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+.profile {
+    padding: 0 20px 20px;
+}
+.head-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.head-img, .profile-con {
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile h2{
+    font-size: 12px;
+    text-align: right;
+    padding-right: 20px;
+}
+.profile h4 {
+    width: 94px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.sidebar-menu h3 {
+
+}
+.nav-title {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 50px;
+    background: #304354;
+}
+.second-menu li {
+    padding-left: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.second-menu li:last-child {
+    border: none;
+}
+.second-menu li p{
+    font-size: 14px;
+    line-height: 46px;
+}

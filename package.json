@@ -1,0 +1,42 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "description": "vue项目构建",
+  "main": "index.html",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.8",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --host 0.0.0.0 --port 8086"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enyobao/vue-learn.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Enyo Bao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enyobao/vue-learn/issues"
+  },
+  "homepage": "https://github.com/enyobao/vue-learn#readme"
+}
