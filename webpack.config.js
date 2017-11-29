@@ -11,7 +11,7 @@ module.exports = {
         filename: '[name].[hash].bundle.js',
         path: path.join(__dirname, 'build')
     },
-    devtool: '#eval-source-map',
+    devtool: '#source-map',
     module: {
         rules: [
             {

@@ -48,7 +48,9 @@ html,body{
     width: 100%;
     background-color: #F5F5F5;
 }
-
+.wrap {
+    height: 100%;
+}
 
 .clear:after{
     content: '';

@@ -22,10 +22,9 @@
                         </a>
                         <ul :class="menu.hasChild" class="second-menu">
                             <li v-for="childMenu in menu.childMenus">
-                                <router-link :to="childMenu.href"></router-link>
-                                <!--<a :href="childMenu.href">-->
+                                <router-link :to="childMenu.href">
                                     <p>{{childMenu.text}}</p>
-                                <!--</a>-->
+                                </router-link>
                             </li>
                         </ul>
                     </li>
@@ -58,33 +57,22 @@
                     },
                     {
                         icon: 'fa-cubes',
-                        text: "产品管理",
+                        text: "服务列表",
                         class: '',
                         hasChild: 'hasChild',
                         childMenus: [
                             {
-                                href: '/./modules/module1',
-                                text: '服务管理333'
+                                href: '/user',
+                                text: '用户中心'
                             },
                             {
-                                href: '/./modules/module2',
-                                text: '服务管理444'
+                                href: '/log',
+                                text: '日志页面'
                             }
-                        ]
-                    },
-                    {
-                        icon: 'fa-cubes',
-                        text: "产品管理222",
-                        class: '',
-                        hasChild: 'noChild',
-                        childMenus: [
+                            ,
                             {
-                                href: '/./modules/module1',
-                                text: 'module1'
-                            },
-                            {
-                                href: '/./modules/module2',
-                                text: 'module2'
+                                href: '/statistics',
+                                text: '统计页面'
                             }
                         ]
                     }
