@@ -1,15 +1,43 @@
 <template>
-    <h3>home</h3>
+    <div class="home">
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+        <card>
+            <log slot="main">balala小魔仙的</log>
+        </card>
+    </div>
 </template>
 
 <script>
-    export default {
+    import Card from './../components/Card';
+    import Log from './log';
 
+    export default {
+        components: {
+            Card,
+            Log
+        }
     }
 </script>
 
 <style>
-    h3 {
-        color: #333;
+    .home {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap-reverse;
     }
 </style>

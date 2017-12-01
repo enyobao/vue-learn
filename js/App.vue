@@ -3,16 +3,16 @@
         <div class="side">
             <SideBar />
         </div>
-        <div class="content">
-            <Main />
-            <router-view></router-view>
-        </div>
+        <Main>
+            <router-view slot="mainContent"></router-view>
+        </Main>
     </div>
 </template>
 <script>
     import '../css/main.css';
     import Vue from 'vue';
     import VueRouter from 'vue-router';
+    import store from './vuex/store/';
     import routes from './router';
 
     import SideBar from './components/SideBar';
@@ -29,7 +29,8 @@
             SideBar,
             Main
         },
-        router: router
+        router,
+        store
     }
 </script>
 <style>

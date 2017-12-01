@@ -49,6 +49,8 @@ html,body{
     background-color: #F5F5F5;
 }
 .wrap {
+    max-width: 1024px;
+    margin: 0 auto;
     height: 100%;
 }
 

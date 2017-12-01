@@ -1,4 +1,4 @@
-import main from './page/main';
+// import home from './page/home';
 
 const admin = r => require.ensure([], () => r(require('./page/admin.vue')), 'admin');
 // const main = r => require.ensure([], () => r(require('./page/main.vue')), 'main');
@@ -12,17 +12,11 @@ const user = r => require.ensure([], () => r(require('./page/user.vue')), 'user'
 export default [
     {
         path: '/',
-        component: main,
-        children: [
-            {
-                path: '',
-                redirect: '/home'
-            },
-            {
-                path: '/home',
-                component: home
-            }
-        ]
+        redirect: '/home',
+    },
+    {
+        path: '/home',
+        component: home
     },
     {
         path: '/serviceList',

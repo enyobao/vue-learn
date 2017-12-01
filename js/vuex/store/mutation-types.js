@@ -1,0 +1,1 @@
+export const LOAD_LINK = "LOAD_LINK";

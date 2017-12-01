@@ -1,5 +1,8 @@
 <template>
-    <h3>log</h3>
+    <div class="log">
+        <h3>log</h3>
+        <slot>我是slot</slot>
+    </div>
 </template>
 
 <script>
