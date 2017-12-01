@@ -17,10 +17,15 @@
             <div class="side-section">
                 <ul class="nav">
                     <li v-for="menu in menus" v-on:click="toggeleMenu(menu)" v-bind:class="menu.class">
+                    <!--<li v-for="menu in menus" v-bind:class="menu.class">-->
                         <a href="javascript:;">
                             <p class="nav-title">{{menu.text}}</p>
                         </a>
-                        <ul :class="menu.hasChild" class="second-menu">
+                        <!--<router-link v-show="false" :to="menu.href" tag="li">-->
+                            <!--<p class="nav-title">{{menu.text}}</p>-->
+                        <!--</router-link>-->
+                        <ul v-show="menu.childMenus" class="second-menu">
+                            <!--<li :class="childMenu.class" v-for="childMenu in menu.childMenus" v-on:click="getLoaderLink(childMenu);">-->
                             <li v-for="childMenu in menu.childMenus">
                                 <router-link :to="childMenu.href">
                                     <p>{{childMenu.text}}</p>
@@ -34,76 +39,7 @@
     </div>
 </template>
 
-<script>
-    export default {
-        data(){
-            return {
-                menus: [
-                    {
-                        icon: "fa-home",
-                        text: "服务管理",
-                        class: '',
-                        hasChild: 'hasChild',
-                        childMenus: [
-                            {
-                                href: 'user',
-                                text: '服务管理111'
-                            },
-                            {
-                                href: 'admin',
-                                text: '服务管理222'
-                            }
-                        ]
-                    },
-                    {
-                        icon: 'fa-cubes',
-                        text: "服务列表",
-                        class: '',
-                        hasChild: 'hasChild',
-                        childMenus: [
-                            {
-                                href: '/user',
-                                text: '用户中心'
-                            },
-                            {
-                                href: '/log',
-                                text: '日志页面'
-                            }
-                            ,
-                            {
-                                href: '/statistics',
-                                text: '统计页面'
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        methods:{
-            toggeleMenu(menu) {
-                if ( menu.href ) {
-                    this.$router.push(menu.href);
-                    this.menus.forEach(item => {
-                        item.class = '';
-                    })
-                    menu.class = 'active';
-                    return ;
-                }
-
-                switch ( menu.class ){
-                    case 'active':
-                        menu.class = '';
-                        break;
-                    case '':
-                        menu.class = 'active';
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-    }
-</script>
+<script src="./../script/sideBar.js"></script>
 
 <style>
     @import "./../../css/components/sideBar.css";
