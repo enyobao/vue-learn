@@ -7,11 +7,11 @@
 <script>
     export default {
         data(){
-            loaderLink: "服务列表"
+            loaderLink: ""
         },
         computed:{
             loaderLink(){
-                return this.$store.state.loaderLink ? this.$store.state.loaderLink: "服务列表";
+                return this.$store.state.loaderLink ? this.$store.state.loaderLink: "首页";
             }
         }
     }
