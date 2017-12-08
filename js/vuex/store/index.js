@@ -5,7 +5,10 @@ import mutations from './mutations';
 Vue.use(Vuex);
 
 let state = {
-    "loaderLink": ""
+    //header标题
+    "loaderLink" : "",
+    //是否显示遮罩
+    "maskShow" : false
 };
 
 export default new Vuex.Store({

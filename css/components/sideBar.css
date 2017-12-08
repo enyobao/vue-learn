@@ -38,6 +38,9 @@
     display: inline-block;
     vertical-align: middle;
 }
+.profile-con {
+    padding: 12px 0;
+}
 .profile h2{
     font-size: 12px;
     text-align: right;
@@ -47,9 +50,6 @@
     width: 94px;
     font-size: 12px;
     line-height: 18px;
-}
-.sidebar-menu h3 {
-
 }
 .nav-title {
     padding-left: 20px;
@@ -70,13 +70,13 @@
     line-height: 46px;
 }
 
-.menu li.active {
-    border-right: 2px solid #53cac3;
+.sidebar-menu li {
+    position: relative;
 }
 
 .router-link-active {
     display: block;
     width: 100%;
     height:100%;
-    border-right: 3px solid #53cac3;
+    border-right: 4px solid #53cac3;
 }

@@ -13,6 +13,7 @@ export default [
     {
         path: '/',
         redirect: '/home',
+
     },
     {
         path: '/home',
@@ -28,7 +29,9 @@ export default [
     },
     {
         path: '/admin',
-        component: admin
+        components: {
+            fullScreen: admin
+        }
     },
     {
         path: '/log',

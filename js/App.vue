@@ -1,11 +1,19 @@
 <template>
     <div class="my-app">
-        <div class="side">
-            <SideBar />
+        <div v-show="!isShow" class="container">
+            <div class="side">
+                <SideBar />
+            </div>
+            <Main>
+                <transition slot="mainContent" name="router-fade" mode="out-in">
+                    <router-view></router-view>
+                </transition>
+            </Main>
         </div>
-        <Main>
-            <router-view slot="mainContent"></router-view>
-        </Main>
+        <!--<div class="mask"></div>-->
+        <div class="mask" v-show="isShow">
+            <router-view name="fullScreen"></router-view>
+        </div>
     </div>
 </template>
 <script>
@@ -17,6 +25,7 @@
 
     import SideBar from './components/SideBar';
     import Main from './page/main';
+    import Admin from './page/admin.vue';
 
     //注册路由插件
     Vue.use(VueRouter);
@@ -27,10 +36,19 @@
         el: '#application',
         components: {
             SideBar,
-            Main
+            Main,
+            Admin
         },
         router,
-        store
+        store,
+        data(){
+            isShow: false
+        },
+        computed: {
+            isShow(){
+                return this.$store.state.maskShow;
+            }
+        }
     }
 </script>
 <style>
@@ -39,16 +57,34 @@
         width: 100%;
         height: 100%;
     }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
     .side {
         position: relative;
-        width: 210px;
+        width: 18%;
         height: 100%;
     }
     .content {
         position: absolute;
-        left: 210px;
+        left: 18%;
         right: 0;
         top: 0;
         height: 100%;
+    }
+    .router-fade-enter-active, .router-fade-leave-active {
+        transition: opacity .3s;
+    }
+    .router-fade-enter, .router-fade-leave-active {
+        opacity: 0;
+    }
+    .mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #1d2124;
     }
 </style>

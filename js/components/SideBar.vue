@@ -16,17 +16,19 @@
         <div class="sidebar-menu">
             <div class="side-section">
                 <ul class="nav">
-                    <li v-for="menu in menus" v-on:click="toggeleMenu(menu)">
+                    <li v-for="menu in menus">
                         <a href="javascript:;" v-show="menu.childMenus">
                             <p class="nav-title">{{menu.text}}</p>
                         </a>
                         <router-link v-show="!menu.childMenus" :to="{path: menu.href}">
                             <p class="nav-title" v-on:click="getLoaderLink(menu);">{{menu.text}}</p>
+                            <span class="icon-sharp"></span>
                         </router-link>
                         <ul v-show="menu.childMenus" class="second-menu">
                             <li v-for="childMenu in menu.childMenus" v-on:click="getLoaderLink(childMenu);">
                                 <router-link :to="childMenu.href">
                                     <p>{{childMenu.text}}</p>
+                                    <span class="icon-sharp"></span>
                                 </router-link>
                             </li>
                         </ul>
